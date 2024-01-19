@@ -11,6 +11,22 @@ const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [score, setScore] = useState(0);
+  const [timer, setTimer] = useState(300);
+
+  useEffect(() => {
+    const timerInterval = setInterval(() => {
+      setTimer((prevTimer) => {
+        if (prevTimer > 0) {
+          return prevTimer - 1;
+        } else {
+          clearInterval(timerInterval);
+          return 0;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timerInterval);
+  }, []);
 
   useEffect(() => {
     axios.get(`/questions/form/${encodeURIComponent(formName)}`)
@@ -29,14 +45,18 @@ const Quiz = () => {
 
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     setSelectedOption(null);
+    setTimer(300);
   };
 
   return (
     <div className="quizContainer">
       <Navbar />
       <div className="formContainer">
+        <div className="timer">
+          <label>{`${Math.floor(timer / 60).toString().padStart(2, '0')}:${(timer % 60).toString().padStart(2, '0')}`}</label>
+        </div>
         {questions.length > 0 && currentQuestionIndex < questions.length && (
-          <form className="quizForm ">
+          <form className="quizForm">
             <div className="formInfomation">
               <p className='qu'> {questions[currentQuestionIndex].question}</p>
               {questions[currentQuestionIndex].options.map((option, index) => (

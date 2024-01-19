@@ -24,19 +24,7 @@ const useFetch = (url) =>{
         fetchData();
     }, [url]);
 
-    const reFetch = async ()=>{
-        setLoading(true)
-        try{
-         const res = await axios.get(url);
-         setData(res.data);
-    
-        }catch(err){
-         setError(err)
-        } 
-        setLoading(false)
-     };
-
-     return {data,loading,error,reFetch}
+     return {data,loading,error}
 };
 
 export default useFetch;
