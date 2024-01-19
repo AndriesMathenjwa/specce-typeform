@@ -1,0 +1,23 @@
+.rtopItems{
+    display: flex; 
+    justify-content: space-between;
+    border-bottom: 1px solid grey; 
+    padding: 10px;
+
+    cursor: pointer;
+}
+.icon{
+    color: grey;
+}
+
+.settingslis{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;       
+}
+.span{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+}

@@ -1,0 +1,25 @@
+.items{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-size: 18px;
+    padding-right: 25px;
+}
+.icon{
+   font-size: 15px;
+   margin-right: 10px;
+}
+.workspaceBtn{
+    background-color: var(--black);
+    padding: 6px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.workspaceBtn:hover{
+    cursor: pointer;
+}
+.itemsfo{
+    margin-bottom: 15px;
+}

@@ -1,0 +1,56 @@
+.input {
+    border: none;
+    background: rgb(186, 186, 186);
+    padding: 4px;
+    outline: none;
+}
+.sideSearchBox {
+    background: rgb(186, 186, 186);
+    border: 1px solid rgb(186, 186, 186);
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 20px;    
+    display: flex;
+    
+}
+.wrkBox{
+    background: rgb(186, 186, 186);
+    border: 1px solid rgb(186, 186, 186);
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 200px;  
+}
+.SideTopInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.Item{
+    display: flex;
+    align-items: center;
+}
+.fbtn{
+  background: rgb(186, 186, 186);
+  padding:10px;
+  /* padding-right:10px; */
+  border-radius: 5px;
+  border: 1px solid rgb(186, 186, 186);
+}
+.fbtn:hover{
+    cursor: pointer;
+}
+.persicon{
+    margin-right: 5px;
+    margin-left: 7px;
+}
+.icon{
+    margin-right: 5px;
+}
+.bitems p{
+    color: rgb(186, 186, 186);
+    margin-bottom: 15px;
+}
+.bitems .pIn{
+    color: var(--black);
+}

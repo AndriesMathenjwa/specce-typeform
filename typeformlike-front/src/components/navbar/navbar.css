@@ -1,0 +1,47 @@
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(186, 186, 186);
+}
+.userInfo{
+    display: flex;
+}
+.PriceInfo{
+    display: flex;
+    align-items: center;
+}
+.actions{
+    display: flex;
+}
+.actions:hover{
+   cursor: pointer;
+}
+.navbtn{
+    background: rgb(36, 112, 36);
+    border-radius: 5px;
+    border: 2px solid rgb(36, 112, 36);
+    height: 40px;
+}
+.inf{
+    margin-right: 15px;
+    color: grey;
+    margin-top: 20px;
+}
+.nam{
+    margin-top: 20px;
+}
+.navbtn:hover{
+    cursor: pointer;
+}
+.initia{
+    background: orange;
+    padding: 12px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.in{
+    background: orange;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 50px;
+}
