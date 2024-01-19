@@ -12,7 +12,8 @@
    margin-right: 10px;
 }
 .workspaceBtn{
-    background-color: var(--black);
+    background-color: black;
+    color: white;
     padding: 6px;
     border-radius: 6px;
     margin-top: 20px;
