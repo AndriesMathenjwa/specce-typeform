@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './newcontent.css';
+import { useNavigate } from 'react-router-dom';
 
 const Newcontent = () => {
   const [information, setInformation] = useState({
@@ -10,7 +11,7 @@ const Newcontent = () => {
     timeLimit: '',
     formName: '',
   });
-
+  const navigate = useNavigate();
   const handleInput = (event) => {
     const { name, value } = event.target;
 
@@ -22,13 +23,19 @@ const Newcontent = () => {
     }
   };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     axios
       .post('/questions', information)
-      .then((response) => console.log(response.data))
-      .catch((err) => console.log(err));
-  }
+      .then((response) => {
+        console.log(response.data);
+        navigate('/');
+      })
+      .catch((err) => {
+        console.log(err);
+        alert('Error creating the form. Please try again.');
+      });
+  };
 
   return (
     <div className="container">
