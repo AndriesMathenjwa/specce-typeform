@@ -23,10 +23,22 @@
 }
 .itemsfo{
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
+
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .dateOptions{
+    background-color: grey;
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-left: 600px;
   }
   
   .card {
