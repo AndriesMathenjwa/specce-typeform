@@ -14,6 +14,7 @@ function App() {
          <Route path="/" element={<Main/>}/>
         <Route path="/content" element={<Content/>}/>
         <Route path="/quiz" element={<Quiz/>}/>
+        <Route path="/quiz/:formName" element={<Quiz />} />
       </Routes>
     </BrowserRouter>
   );

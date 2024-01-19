@@ -13,6 +13,18 @@ router.post("/", async (req, res) => {
     }
 });
 
+router.get("/form/:formName", async (req, res) => {
+    try {
+        const formName = req.params.formName;
+
+        const questions = await Question.find({ formName });
+        res.status(200).json(questions);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 router.get("/", async (req, res) => {
     try {
         const questions = await Question.find();
